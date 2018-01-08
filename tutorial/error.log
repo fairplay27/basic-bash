@@ -1,0 +1,8 @@
+java.util.zip.ZipException: error in opening zip file
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:126)
+	at sun.tools.jar.Main.list(Main.java:1115)
+	at sun.tools.jar.Main.run(Main.java:293)
+	at sun.tools.jar.Main.main(Main.java:1288)
