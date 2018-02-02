@@ -1,4 +1,3 @@
-
 #!/bin/bash
 # arglist.sh
 # Invoke this script with several arguments, such as "one two three" ...
@@ -7,7 +6,7 @@ E_BADARGS=85
 
 if [ ! -n "$1" ]
 then
-  echo "Usage: `basename $0` argument1 argument2 etc."
+  echo "Usage: $(basename $0) argument1 argument2 etc."
   exit $E_BADARGS
 fi  
 
@@ -47,5 +46,17 @@ do
   let "index+=1"
 done             # Unquoted $* sees arguments as separate words. 
 echo "Arg list seen as separate words."
+
+
+# Esempio con shift
+echo "Sample 2 shift (ogni shift si perede il primo parametro \$1 )" 
+echo "$@"    # 1 2 3 4 5
+shift
+echo "$@"    # 2 3 4 5
+shift
+echo "$@"    # 3 4 5
+
+# Each "shift" loses parameter $1.
+# "$@" then contains the remaining parameters.
 
 exit 0
